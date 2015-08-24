@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# load rvm ruby
+source {.RVM_PATH}/.rvm/environments/ruby-2.2.2
+# change dir
+cd {TEST_COMMISSIONER_PATH}
+# install deps
+bundle install --jobs=8
+# source api key
+source {TEST_COMMISSIONER_PATH}/.env
+# run monitor script
+{RVM_PATH}/.rvm/rubies/ruby-2.2.2/bin/ruby /Users/piet/hacks/circle-dashboard/two/app/monitor/monitor.rb

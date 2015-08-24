@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+ruby '2.2.2'
+
+gem 'sinatra'
+gem 'circleci'
+gem 'pry'
+gem 'awesome_print'
+gem 'nokogiri'
+gem 'pg'
+gem 'activerecord'
+gem 'sinatra-activerecord'
