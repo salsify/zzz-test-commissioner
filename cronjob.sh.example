@@ -9,4 +9,4 @@ bundle install --jobs=8
 # source api key
 source {TEST_COMMISSIONER_PATH}/.env
 # run monitor script
-{RVM_PATH}/.rvm/rubies/ruby-2.2.2/bin/ruby /Users/piet/hacks/circle-dashboard/two/app/monitor/monitor.rb
+{RVM_PATH}/.rvm/rubies/ruby-2.2.2/bin/ruby {TEST_COMMISION_PATH}/app/monitor/monitor.rb

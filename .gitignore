@@ -1,3 +1,4 @@
 .env
 .bundle
 **.swp
+cronjob.sh
