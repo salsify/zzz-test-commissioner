@@ -45,41 +45,7 @@ _CircleCI Test Failure Aggregator_
 
 ### Monitor
 
-  The monitor program lives in `app/monitor/monitor.rb` and needs to be run on a `cronjob` with the appropriate environment variables set.
-
-  To set this up, copy the cronjob.sh.example file and fill out the necessary fields.
-    - You will need to specify the home directory of the application to ensure this is working.
-    - You will also need to ensure the appropriate version of ruby is running the application, the example script is for RVM users
-
-  So copy over the example script via:
-  ```
-    cp cronjob.sh.example cronjob.sh
-  ```
-
-  And replace the follow:
-  ```
-    {TEST_COMMISSIONER_PATH} should be the current path of the application
-    {.RVM_PATH} should be the current path of your .rvm directory
-  ```
-
-  Then, edit your cron entries via:
-
-  ```
-    crontab -e
-  ```
-
-  And add the following:
-
-
-  ```
-    *,30 * * * * {TEST_COMMISSIONER_PATH}/cronjob.sh > /tmp/cronlog.log 2> /tmp/cronerror.log
-  ```
-
-  Where `{TEST_COMMISSIONER_DIR}` is replaced by the applications directory.
-
-  This will run the monitor script every 30 minutes.
-
-  Of course you can skip all this and just run ruby app/monitor/monitor.rb every so often...
+  The monitor program lives in `app/monitor/monitor.rb` and needs to be run via a rake task `rake download_test_data`
 
 ## Specifications
 
