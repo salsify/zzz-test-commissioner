@@ -28,7 +28,6 @@ module Gordon
 
     def run
       puts 'Starting monitor'
-      puts ENV['CIRCLECI_API_TOKEN']
       save_builds
       save_tests
       puts 'Finish monitor'
