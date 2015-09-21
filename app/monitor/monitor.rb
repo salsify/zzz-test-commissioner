@@ -22,11 +22,13 @@ module Gordon
     def initialize
       CircleCi.configure do |config|
         config.token = ENV['CIRCLECI_API_TOKEN']
+        puts config.token
       end
     end
 
     def run
       puts 'Starting monitor'
+      puts ENV['CIRCLECI_API_TOKEN']
       save_builds
       save_tests
       puts 'Finish monitor'
