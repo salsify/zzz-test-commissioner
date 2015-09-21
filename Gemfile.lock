@@ -16,12 +16,21 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     awesome_print (1.6.1)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    bond (0.5.1)
     builder (3.2.2)
+    byebug (5.0.0)
+      columnize (= 0.9.0)
     circleci (0.1.1)
       rest-client (~> 1.6)
     coderay (1.1.0)
+    colorize (0.7.7)
+    columnize (0.9.0)
+    debug_inspector (0.0.2)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
+    highline (1.7.6)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -38,6 +47,29 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-bloodline (0.0.2)
+      colorize (~> 0.7)
+      pry (~> 0.10)
+    pry-byebug (3.2.0)
+      byebug (~> 5.0)
+      pry (~> 0.10)
+    pry-doc (0.8.0)
+      pry (~> 0.9)
+      yard (~> 0.8)
+    pry-docmore (0.1.1)
+      pry
+      pry-doc
+    pry-macro (1.0.1)
+      highline
+      pry
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
+    pry-stack_explorer (0.4.9.2)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
+    pry-state (0.1.6)
+      pry (>= 0.9.10, < 0.11.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -60,6 +92,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
+    yard (0.8.7.6)
 
 PLATFORMS
   ruby
@@ -67,10 +100,19 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   awesome_print
+  bond
   circleci
   nokogiri
   pg
   pry
+  pry-bloodline
+  pry-byebug
+  pry-doc
+  pry-docmore
+  pry-macro
+  pry-remote
+  pry-stack_explorer
+  pry-state
   sinatra
   sinatra-activerecord
 
