@@ -6,6 +6,10 @@ require_relative './models/build'
 require_relative './models/test_file'
 require_relative './models/test_failure'
 
+use Rack::Auth::Basic, "Protected Area" do |username, password|
+  username == ENV['USERNAME'] && password == ENV['PASSWORD']
+end
+
 get '/' do
   content_type :json
   {'status': 'alive'}.to_json
