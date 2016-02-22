@@ -40,7 +40,7 @@ end
 get '/latest_failures' do
   content_type :json
   count = params[:count] ? params[:count] : 50
-  TestFailure.all.order(:timestamp).limit(count).to_json
+  TestFailure.all.order(timestamp: :desc).limit(count).to_json
 end
 
 get '/worst_files' do
